@@ -121,6 +121,10 @@ REQUIRES = [r.replace('==', ' (== ') for r in REQUIRES]
 REQUIRES = [r.replace('[array]', '') for r in REQUIRES]
 
 
+print("---REQUIRES: ------ {}".format(str(REQUIRES)))
+print("---INSTALL_REQUIRES: ------ {}".format(str(INSTALL_REQUIRES)))
+
+
 def configuration(parent_package='', top_path=None):
     if os.path.exists('MANIFEST'):
         os.remove('MANIFEST')
